@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: appnode
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: appnode
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: meuappnode
-          image: samuelhuarachi/nodeapp:v1
+          image: samuelhuarachi/nodeapp:latest
           ports:
             - containerPort: 3001
